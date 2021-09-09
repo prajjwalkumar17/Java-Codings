@@ -28,6 +28,7 @@ import java.util.Scanner;
             int c = inputnos[2];
             int d = inputnos[3];
             int e = inputnos[4];
+
             int miofthethreeweights = minimumofthree(a, b, c);
             int sumofcheckedinbag = maxofallthree(a, b, c);
             if (sumofcheckedinbag <= d && miofthethreeweights <= e) {
