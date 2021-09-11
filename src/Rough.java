@@ -11,6 +11,7 @@ public class Rough {
             System.out.println("Enter N A B");
             int x = scanner.nextInt();
             int y = scanner.nextInt();
+
             int z = scanner.nextInt();
 
             for(int c=0;c<x;c++)
