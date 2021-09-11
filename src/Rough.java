@@ -9,6 +9,7 @@ public class Rough {
 
         for(int a=0;a<testcases;a++) {
             System.out.println("Enter N A B");
+
             int x = scanner.nextInt();
 
             int y = scanner.nextInt();
