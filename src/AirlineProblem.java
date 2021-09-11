@@ -1,11 +1,10 @@
 import java.util.Scanner;
 
- class Codechef {
-    private static Scanner scanner;
+ class AirlineProblem {
+     public static void main(String[] args) {
 
-    public static void main(String[] args) {
-
-        scanner = new Scanner(System.in);
+        //TODO change scanner
+         Scanner scanner = new Scanner(System.in);
         int nooftestcases = scanner.nextInt();
         String[] distinctstringarray = new String[nooftestcases + 1];
         for (int i = 0; i < nooftestcases + 1; i++) {
@@ -13,12 +12,19 @@ import java.util.Scanner;
         }
         for (int j = 0; j < nooftestcases; j++) {
             String hbhb = distinctstringarray[j + 1];
+
             fun(hbhb);
         }
     }
-    private static void fun(String abcde) {
+
+//    private static void realfun(int[],){
+//
+//
+//    }
+
+    private static void fun(String abcd) {
         try{
-            String[] token = abcde.split(" ");
+            String[] token = abcd.split(" ");
             int[] inputnos = new int[5];
             for (int i = 0; i < 5; i++) {
                 inputnos[i] = Integer.parseInt(token[i]);

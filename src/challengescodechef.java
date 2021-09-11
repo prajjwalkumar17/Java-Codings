@@ -10,7 +10,8 @@ public class challengescodechef {
         int nooftestcases = scanner.nextInt();
 
         String[] distinctstringarray = new String[nooftestcases + 1];
-        for (int i = 0; i < nooftestcases + 1; i++) {
+        for (int i = 0; i < nooftestcases + 1; i++)
+        {
             distinctstringarray[i] = scanner.nextLine();
         }
         for (int j = 0; j < nooftestcases; j++) {
