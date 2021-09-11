@@ -1,10 +1,12 @@
-import java.io.IOException;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 import java.util.Scanner;
 
-public class TravelPass {
+class Codechef {
+    private static Scanner scanner=new Scanner(System.in);
     public static void main(String[] args)
     {
-        Scanner scanner=new Scanner(System.in);
         int testcases = scanner.nextInt();
         int[] result = new int[testcases];
         if (testcases == 1) {
@@ -84,4 +86,3 @@ public class TravelPass {
         return yuyu;
     }
 }
-
