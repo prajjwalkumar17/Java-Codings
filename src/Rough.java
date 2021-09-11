@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class Rough {
-
+   private static Scanner scanner=new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
+
         System.out.println("Enter no.of test cases");
         int testcases=scanner.nextInt();
 
@@ -17,19 +17,20 @@ public class Rough {
 
             int z = scanner.nextInt();
 
-            for(int c=0;c<x;c++)
-            {
-                System.out.println("print");
-            }
-
             printyes(x,y,z,testcases);
         }
     }
 
     private static void printyes(int x, int y, int z, int testcases) {
         for(int a=0;a<testcases/2;a++) {
-            System.out.println(x+" "+y+" "+z+" "+testcases);
+            System.out.println(x+" "+y+" "+z);
+            System.out.println("enter the different X  values");
+            String pq=scanner.next();
 
+            char[] pqchar=new char[String.valueOf(x).length()];
+            pqchar=pq.toCharArray();
+
+            System.out.println(pqchar[1]);
 
         }
         }
