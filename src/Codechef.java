@@ -15,6 +15,7 @@ class Codechef
             int C=sc.nextInt();
 
             int D=sc.nextInt();
+
             int E=sc.nextInt();
 
             int max=Math.max(Math.max(A,C),B);
