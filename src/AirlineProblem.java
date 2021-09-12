@@ -17,10 +17,6 @@ import java.util.Scanner;
         }
     }
 
-//    private static void realfun(int[],){
-//
-//
-//    }
 
     private static void fun(String abcd) {
         try{
