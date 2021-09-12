@@ -12,6 +12,7 @@ class Codechef
         while(test!=0){
             int A=sc.nextInt();
             int B=sc.nextInt();
+
             int C=sc.nextInt();
 
             int D=sc.nextInt();
