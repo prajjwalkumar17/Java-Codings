@@ -1,88 +1,93 @@
+/* package codechef; // don't place package name! */
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-import java.util.Scanner;
 
-class Codechef {
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
     private static Scanner scanner=new Scanner(System.in);
-    public static void main(String[] args)
+
+    public static void main (String[] args) throws java.lang.Exception
     {
-        int testcases = scanner.nextInt();
-        int[] result = new int[testcases];
-        if (testcases == 1) {
-            try {
+        try {
+            int testcases = scanner.nextInt();
+            int[] result = new int[testcases];
+            if (testcases == 1) {
 
-                int x = scanner.nextInt();
 
-                int y = scanner.nextInt();
+                int N = scanner.nextInt();
 
-                int z = scanner.nextInt();
-                String pq = scanner.next();
-                char[] pqchar = new char[String.valueOf(x).length()];
-                pqchar = pq.toCharArray();
-                int countx = 0;
-                int county = 0;
-                for (int tt = 0; tt < x; tt++) {
-                    int xr = Integer.parseInt(String.valueOf(pqchar[tt]));
+                int A = scanner.nextInt();
+
+                int B = scanner.nextInt();
+                String S = scanner.next();
+                char[] Schar = new char[String.valueOf(N).length()];
+                Schar = S.toCharArray();
+                int counttimeforinterdistrict = 0;
+                int countimeforinterstate = 0;
+                for (int tt = 0; tt < N; tt++) {
+                    int xr = Integer.parseInt(String.valueOf(Schar[tt]));
                     if (xr == 0) {
-                        countx++;
+                        counttimeforinterdistrict++;
                     } else if (xr == 1) {
-                        county++;
+                        countimeforinterstate++;
                     }
                 }
-                System.out.println(y * countx + z * county);
-            }catch(Exception e){
-                e.printStackTrace();
-
+                System.out.println(A * counttimeforinterdistrict + B * countimeforinterstate);
             }
+
+            else {
+                for (int a = 0; a < testcases; a++) {
+                    int N = scanner.nextInt();
+
+                    int A = scanner.nextInt();
+
+                    int B = scanner.nextInt();
+
+                    result[a] = printyes(N, A, B, testcases);
+                }
+                for (int ui = 0; ui < testcases; ui++) {
+                    System.out.println(result[ui]);
+
+                }
+            }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            return;
+
         }
-
-        else {
-            for (int a = 0; a < testcases; a++) {
-                int x = scanner.nextInt();
-
-                int y = scanner.nextInt();
-
-                int z = scanner.nextInt();
-
-                result[a] = printyes(x, y, z, testcases);
-            }
-            for (int ui = 0; ui < testcases; ui++) {
-                System.out.println(result[ui]);
-
-            }
-        }
+        // your code goes here
     }
-
-    private static int printyes(int x, int y, int z, int testcases) {
+    private static int printyes(int N, int A, int B, int testcases) throws Exception
+    {
         Scanner scanner=new Scanner(System.in);
-        int yuyu=0;
+        int Result=0;
         try {
             for (int a = 0; a < testcases / 2; a++) {
 //            System.out.println(x+" "+y+" "+z);
 //            System.out.println("enter the different X  values");
-                String pq = scanner.next();
-                char[] pqchar = new char[String.valueOf(x).length()];
-                pqchar = pq.toCharArray();
-                int countx = 0;
-                int county = 0;
-                for (int tt = 0; tt < x; tt++) {
-                    int xr = Integer.parseInt(String.valueOf(pqchar[tt]));
+                String S = scanner.next();
+                char[] Schar = new char[String.valueOf(N).length()];
+                Schar = S.toCharArray();
+                int counttimeforinterdistrict = 0;
+                int countimeforinterstate = 0;
+                for (int tt = 0; tt < N; tt++) {
+                    int xr = Integer.parseInt(String.valueOf(Schar[tt]));
                     if (xr == 0) {
-                        countx++;
+                        counttimeforinterdistrict++;
                     } else if (xr == 1) {
-                        county++;
+                        countimeforinterstate++;
                     }
                 }
-
-
-//            System.out.println(y*countx +z*county);
-
-                yuyu = y * countx + z * county;
+                Result = A * counttimeforinterdistrict + B * countimeforinterstate;
+                return Result;
             }
         }catch(Exception e){
             e.printStackTrace();
         }
-        return yuyu;
+        return Result;
     }
+
 }

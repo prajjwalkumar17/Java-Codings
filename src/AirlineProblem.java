@@ -54,4 +54,5 @@ import java.util.Scanner;
     private static int minimumofthree(int a, int b, int c) {
         return Math.min(Math.min(a, b), c);
     }
+
 }
