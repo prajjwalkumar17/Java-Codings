@@ -1,9 +1,6 @@
+import java.util.Scanner;
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-class Codechef {
+public class BigArrayProblem{
     public static void main(String[] args) throws java.lang.Exception {
 
         Scanner sc = new Scanner(System.in);
@@ -17,14 +14,14 @@ class Codechef {
                 A[i] = i;
             }
             loopy(A,Max,Sum);
-           test--;
+            test--;
         }
     }
 
     private static void loopy(int[] A,  int Max, int Sum) {
         for (int i = 0; i <= Max; i++) {
             for (int j = i + 2; j <= Max+1; j++) {
-               int resulty = sumum(A, 1, i) + sumum(A, j, Max);
+                int resulty = sumum(A, 1, i) + sumum(A, j, Max);
                 if (resulty==Sum) {
                     System.out.println(i+1);
                     return;
@@ -45,9 +42,3 @@ class Codechef {
     }
 
 }
-
-
-
-
-
-
