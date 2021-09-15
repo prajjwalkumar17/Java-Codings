@@ -1,9 +1,6 @@
+import java.util.Scanner;
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-class Codechef {
+public class ArrayMatrixProblemTLE {
     public static void main(String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
         int test = sc.nextInt();
@@ -44,9 +41,3 @@ class Codechef {
 
 
 }
-
-
-
-
-
-
