@@ -6,6 +6,7 @@ public class BigArrayProblem{
         Scanner sc = new Scanner(System.in);
         int test = sc.nextInt();
         while (test != 0) {
+
             int Max = sc.nextInt();
             int Sum = sc.nextInt();
 
