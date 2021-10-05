@@ -1,4 +1,5 @@
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -8,30 +9,53 @@ class Codechef {
     public static void main(String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
         int test = sc.nextInt();
+        int confirmpos = 0;
         while (test != 0) {
-
-            int A= sc.nextInt();
-            int B= sc.nextInt();
-            int C= sc.nextInt();
-            int D= sc.nextInt();
-            if(A+B+C<=D){
-                System.out.println("1");
-            } else if( (A+B<=D && C<=D) || (A+C<=D && B<=D) ||(B+C<=D && A<=D)){
-                System.out.println("2");
-            } else {
-                System.out.println("3");
-            }
-
-
-
+            int N = sc.nextInt();
+            int D = sc.nextInt();
+            char[] originalnumber = String.valueOf(N).toCharArray();
+//            for(int i=0;i<String.valueOf(N).length();i++){
+//                if(String.valueOf(originalnumber[i]).equals(String.valueOf(D))){
+//                    System.out.println("Found firdst common element that is "+D+" At position "+i);
+//                    confirmpos=i;
+//                    System.out.println(tobedelted(confirmpos,originalnumber,N));
+//                }
+////                System.out.println(originalnumber[i]);
+//            }
+            System.out.println(tobedelted(getposition(originalnumber,N,D),originalnumber,N));
             test--;
         }
     }
 
+    private static int tobedelted(int confirmpos, char[] originalnumber, int N) {
+        String q = "0";
+        for (int j = confirmpos; j < String.valueOf(N).length(); j++) {
+            q += String.valueOf(originalnumber[j]);
+        }
+        int result=Integer.parseInt(q);
+        return result;
+    }
 
+//    private static int deletedfrom(String no){
+//        int a=0;
+//        for(int k=1;k<no.length();k++){
+//
+//        }
+//
+//
+//
+//        return 0;
+//    }
+
+    private static int getposition(char[] originalnumber, int N, int D) {
+        for (int i = 0; i < String.valueOf(N).length(); i++) {
+            if (String.valueOf(originalnumber[i]).equals(String.valueOf(D))) {
+                return i;
+            }
+        }
+        return 0;
+    }
 
 }
-
-
 
 
