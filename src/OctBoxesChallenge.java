@@ -1,10 +1,15 @@
+import java.util.Scanner;
+/*
+*Chef has 3
+ boxes of sizes A
+, B
+, and C
+ respectively. He puts the boxes in bags of size D
+ (A≤B≤C≤D
+). Find the minimum number of bags Chef needs so that he can put each box in a bag. A bag can contain more than one box if the sum of sizes of boxes in the bag does not exceed the size of the bag.
+* */
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-class Codechef {
-
+public class OctBoxesChallenge {
     public static void main(String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
         int test = sc.nextInt();
@@ -28,10 +33,4 @@ class Codechef {
         }
     }
 
-
-
 }
-
-
-
-
