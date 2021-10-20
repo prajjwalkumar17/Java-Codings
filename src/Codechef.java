@@ -15,46 +15,25 @@ class Codechef {
         Scanner sc = new Scanner(System.in);
         int test = sc.nextInt();
         while (test-- > 0) {
-            int dayscounted = 0;
-            int everydaypay = sc.nextInt();
-            int Streakpay = sc.nextInt();
-            String daysworked = sc.next();
+            int direction = 0;
+            int N = sc.nextInt();
+            String movements=sc.next();
+            char[] movementreal=movements.toCharArray();
 
-
-            char[] days = daysworked.toCharArray();
-
-            for (int i = 0; i < daysworked.length(); i++) {
-                if (Character.getNumericValue(days[i])==1){
-                    dayscounted++;
+            for(int i=0;i<N;i++){
+                if(movementreal[i]=='L'){
+                    direction++;
+                } else {
+                    direction--;
                 }
+
+            }
+            if(direction==2){
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
             }
 
-            System.out.println((dayscounted*everydaypay)+(Streakpay*getMaxLength(days,days.length)));
-
         }
-    }
-
-    static int getMaxLength(char[] arr, int n)
-    {
-
-        int count = 0; //intitialize count
-        int result = 0; //initialize max
-
-        for (int i = 0; i < n; i++)
-        {
-            // Reset count when 0 is found
-            if (Character.getNumericValue(arr[i]) == 0)
-                count = 0;
-                // If 1 is found, increment count
-                // and update result if count becomes
-                // more.
-            else
-            {
-                count++;//increase count
-                result = Math.max(result, count);
-            }
-        }
-
-        return result;
     }
 }
