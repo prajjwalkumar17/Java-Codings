@@ -4,12 +4,11 @@ import java.lang.*;
 
 class Codechef {
     /**
-     * Given the schedule of Chef for 30 days (A binary string of length 30 where '0' denotes that Chef was on leave and '1'
-     * denotes Chef was working on that day). Chef gets X− Rs for every day he worked. As working continuously for a long time
-     * s hectic so Company introduced the following policy to give a bonus to its employees.
-     * <p>
-     * The company will check the longest streak for which an employee has worked and will award Y− Rs for every day of that
-     * streak as a bonus. Calculate the salary received by Chef (including the bonus).
+     Faizal is very sad after finding out that he is responsible for Sardar's death. He tries to drown his sorrows in alcohol and gets very drunk. Now he wants to return home but is unable to walk straight. For every 3 steps forward, he ends up walking one step backward.
+
+     Formally, in the 1st second he moves 3 steps forward, in the 2nd second he moves 1 step backwards, in the 3rd second he moves 3 steps forward, in 4th second 1 step backwards, and so on.
+
+     How far from his initial position will Faizal be after k seconds have passed? Assume that Faizal's initial position is 0.
      */
     public static void main(String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
