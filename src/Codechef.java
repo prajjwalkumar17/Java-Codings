@@ -15,23 +15,12 @@ class Codechef {
         Scanner sc = new Scanner(System.in);
         int test = sc.nextInt();
         while (test-- > 0) {
-            int direction = 0;
-            int N = sc.nextInt();
-            String movements=sc.next();
-            char[] movementreal=movements.toCharArray();
+            int Time = sc.nextInt();
+            if(Time%2==0){
+                System.out.println(((Time/2)*3)-(Time/2));
+            } else{
+                System.out.println(((Time/2)*3)-(Time/2)+3);
 
-            for(int i=0;i<N;i++){
-                if(movementreal[i]=='L'){
-                    direction++;
-                } else {
-                    direction--;
-                }
-
-            }
-            if(direction==2){
-                System.out.println("YES");
-            } else {
-                System.out.println("NO");
             }
 
         }
