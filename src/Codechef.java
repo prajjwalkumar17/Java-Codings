@@ -3,32 +3,21 @@ import java.util.*;
 import java.lang.*;
 
 class Codechef {
-    /**
-     * The current price of petrol is X rupees, and the current price of diesel is Y rupees. At the start of each month, the price
-     * of petrol increases by A rupees and the price of diesel increases by B rupees.
-     * <p>
-     * Chef is curious to know which fuel costs less at the end of the Kth month. If petrol is cheaper than diesel at the end of Kth month,
-     * then print PETROL. If diesel is cheaper than petrol at the end of the Kth month, then print DIESEL. If both the fuels have the same price at the end of the Kth month,
-     * then print SAME PRICE.
+    /**Chef has X coins worth 1 rupee each and Y coins worth 2 rupees each. He wants to distribute all of these X+Y coins
+     * to his two sons so that the total value of coins received by each of them is the same. Find out whether Chef will be able to do so.
      */
     public static void main(String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
         int test = sc.nextInt();
         while (test-- > 0) {
-            int CurrentPetrol = sc.nextInt();
-            int CurrentDeisel = sc.nextInt();
-            int petrolinc = sc.nextInt();
-            int Deiselinc = sc.nextInt();
-            int noofmonths = sc.nextInt();
+            int onerupeecoins = sc.nextInt();
+            int tworupeecoins = sc.nextInt();
 
-            if ((CurrentPetrol + (petrolinc * noofmonths)) < (CurrentDeisel + (Deiselinc * noofmonths))) {
-                System.out.println("PETROL");
-            } else if ((CurrentPetrol + (petrolinc * noofmonths)) > (CurrentDeisel + (Deiselinc * noofmonths))) {
-                System.out.println("DIESEL");
+            if(((onerupeecoins)+(tworupeecoins*2))%2==0){
+                System.out.println("YES");
             } else {
-                System.out.println("SAME PRICE");
+                System.out.println("NO");
             }
-
         }
     }
 }
