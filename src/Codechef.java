@@ -6,10 +6,21 @@ class Codechef { public static void main(String[] args) {
     Scanner scanner=new Scanner(System.in);
     System.out.println("Enter a no to print wheather it is pallindrone or not");
     int n=scanner.nextInt();
-    System.out.println(pallindrone(n));
-    System.out.println(factorial(n));
+//    System.out.println(pallindrone(n));
+//    System.out.println(factorial(n));
+    System.out.println(trailzero(factorial(n)));
 
 }
+
+    private static int trailzero(int factorial) {
+    int count=0;
+    while (factorial%10 == 0){
+        count++;
+        factorial=factorial/10;
+    }
+        System.out.println(count);
+        return count;
+    }
 
     private static int factorial(int n) {
     int tmp=0;
